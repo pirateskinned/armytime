@@ -1,0 +1,2376 @@
+<!DOCTYPE html>
+<head>
+
+<title>ARMY TIME - ARIRANG WORLD TOUR</title>
+
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<meta name="description" content="{MetaDescription}" />
+
+<!-- scripts -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<!-- fonts -->
+
+<link href="https://api.fontshare.com/v2/css?f[]=space-grotesk@400,700&display=swap" rel="stylesheet"> 
+
+<!-- tooltips -->
+
+<script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+
+<!-- icon font -- tabler-icons.io -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+<script>
+    (function($){
+        $(document).ready(function(){
+            $("[title]").style_my_tooltips({
+                tip_follows_cursor:true,
+                tip_delay_time:30,
+                tip_fade_speed:300,
+                attribute:"title"
+            });
+        });
+    })(jQuery);
+</script>
+
+<style type="text/css">
+
+/* ---
+
+    THEME OPTIONS
+    
+--- */
+
+:root {
+    
+    --font-size:13px;
+    
+    --background:#e8e8e8;
+    --text-bg:#f0f0f0;
+    --border:#ffffff;
+    --light:#e0e0e0;
+    --text:#4f4e4e;
+    --accent:#c38a5d;
+    
+    --sidebar:url('https://64.media.tumblr.com/e7eefc655f60475fdcaf264d1c3eae24/749fad6f63eec003-4a/s2048x3072/e56d4df5c35cf1480c8cb78da82cd640c12dc59a.jpg');
+    
+    --asia:#e0cddb;
+    --northam:#f8d1dd;
+    --southam:#f8d5c2;
+    --europe:#f4e4a4;
+    --australia:#d7e5c5;
+    --africa:#c9dce7;
+    
+    /* albums */
+    
+    
+    --coolskool:url('https://64.media.tumblr.com/52ba8569e80572bc271256cb34e36867/d23afb846aa69d50-cd/s640x960/ef568a001789e5959dfa561422351babfd4c1d55.jpg');
+    --rulate:url('https://64.media.tumblr.com/381e4efc97a6932d15d08ed38e507a4d/d23afb846aa69d50-85/s640x960/8789b9c3da78444bff041b7960da98a80948a1ba.jpg');
+    --skoolluv:url('https://64.media.tumblr.com/44bfa97a367ab1de2f7f9065874fce0b/d23afb846aa69d50-c6/s640x960/3d0bfddc292894dd1e43390721c0d228dcdb02eb.jpg');
+    --darkwild:url('https://64.media.tumblr.com/bd4560913e39a97f62051a688eb3903b/d23afb846aa69d50-0c/s640x960/bb57d0323b7e8b1a34f5a3747e5339d2589f263b.jpg');
+    --hyyh1:url('https://64.media.tumblr.com/9d6122addf7e59207aabd8c1a0da6e6d/d23afb846aa69d50-db/s640x960/07629af02ea195e65673f509fecb95ec34c3f157.jpg');
+    --hyyh2:url('https://64.media.tumblr.com/00a2554e021831afcbeca56bda47fa4a/d23afb846aa69d50-0f/s640x960/89fa475a05bb9e8e8354165402e3612b9672f8c9.jpg');
+    --youngforever:url('https://64.media.tumblr.com/32d93fcd6bba6ee07931e8c2cf5434de/d23afb846aa69d50-69/s640x960/2c850fa7350bb6cbd0ae9ed50491d3200612a7d8.jpg');
+    --wings:url('https://64.media.tumblr.com/90941ba7625c28f454809d839ca4875b/d23afb846aa69d50-f4/s640x960/a0843be8f580c2bab44eecb36bec561ccd4bdd5b.jpg');
+    --neverwalkalone:url('https://64.media.tumblr.com/d7dbd55e26afeeef620a42a609318508/d23afb846aa69d50-25/s640x960/022f9d8f78d4eebf81192a72ba5cd7a0d97a2832.jpg');
+    --lyher:url('https://64.media.tumblr.com/caf64cd522f5da6e08c1972d8d8ae5c7/d23afb846aa69d50-0e/s640x960/0ec39a5e0bf3021e0da3272f54bebf49398b2ed5.jpg');
+    --lytear:url('https://64.media.tumblr.com/31eb97e9716f1da12d80b611486e4457/d23afb846aa69d50-c7/s640x960/f7172acfdace071b0a8ad1867485f25ed7e249e4.jpg');
+    --lyanswer:url('https://64.media.tumblr.com/c41a8863672458b857e5363497705abd/d23afb846aa69d50-0c/s640x960/18746266dc9ed78858638c3141852d676789c494.jpg');
+    --persona:url('https://64.media.tumblr.com/4ff959454a84cd92555510e228ad2bde/d23afb846aa69d50-41/s640x960/a9137ce801772cb19444351cb1255be4350a46ba.jpg');
+    --mots7:url('https://64.media.tumblr.com/a10a8ad98275ec84b8eeb7bba84a990c/d23afb846aa69d50-ba/s540x810/ea31082caaf269d0d14b90b9a34e979b8a38374c.jpg');
+    --be:url('https://64.media.tumblr.com/75fead41f80784287dd2e68a0cd1440e/d23afb846aa69d50-34/s540x810/28a471cb6bf6480b39e9e658c661817cb85aff43.jpg');
+    --proof:url('https://64.media.tumblr.com/69014c4cc3139dcaf3ba095086be92ad/d23afb846aa69d50-48/s540x810/3b11870ebce52b9a98168bd6730aa7a2ceb9a5be.pnj');
+    --taketwo:url('https://64.media.tumblr.com/b7a4c26c90f3bd6b63c2f8d02cdc844f/d23afb846aa69d50-00/s540x810/5fa940a4505c57b439cbe3c00dec9f3c1ba659c0.pnj');
+    --faceyourself:url('https://64.media.tumblr.com/ad9f050d33cea6eedcf8e430ae6d2217/4086eed0ff191241-96/s400x600/10d06105e77657384675924cb09ba11757a7bc82.jpg');
+    
+}
+
+iframe.tmblr-iframe {
+    z-index:999999!important;
+    top:7px!important;
+    right:10px!important;
+    transform:scale(0.5);
+    transform-origin:100% 0;
+    display:none;
+}
+
+/* --- tooltips & scrollbars --- */
+
+#s-m-t-tooltip {
+    position:absolute;
+    margin-top: 15px;
+    z-index:9999;
+    padding:3px 7px;
+    background:var(--background);
+    color:var(--text);
+    font-size:var(--font-size);
+    border:1px solid var(--border);
+    box-shadow:0px 0px 5px rgba(78, 78, 78, 0.1);
+    border-radius:8px;
+}
+
+::-webkit-scrollbar-thumb {background-color:{color:accent};}
+::-webkit-scrollbar {background-color:transparent; width:1px; height:1px;}
+::-webkit-scrollbar-track {margin:8px 0px;}
+
+/* --- basics --- */
+
+body {
+    background-color:var(--background);
+    color:var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size:var(--font-size);
+    line-height:1.5em;
+    font-weight:400;
+    text-align:left;
+    margin:0;
+}
+
+a {
+    color:var(--text);
+    text-decoration:none;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+    a:hover {
+        color:var(--text);
+        text-decoration:none;
+    }
+    
+p a, li a
+{border-bottom:1px solid var(--border);}
+p a:hover, li a:hover
+{border-bottom:1px solid var(--accent);}
+
+img {
+    border:none;
+    text-decoration:none;
+}
+
+u {
+    text-decoration:none;
+}
+
+small, sub, sup, big {
+    font-size:var(--font-size);
+    line-height:1.5em;
+    vertical-align:baseline;
+}
+
+blockquote {
+    padding:0px 5px 0px 15px;
+    border-left:1px solid var(--border);
+    margin-left:5px;
+    margin-right:0px;
+}
+
+ul {
+    padding-left:15px;
+}
+
+    ul li {
+        list-style-type:none;
+    }
+    
+        ul li:before {
+          content: "— ";
+          text-indent: -5px;
+        }
+        
+hr {
+    border:none;
+    border-bottom:1px solid var(--border);
+    width:calc(100% - 150px);
+    margin:0px auto 20px auto;
+}
+
+h1 {
+    font-weight:700;
+}
+
+h2 {
+    font-weight:bold;
+    margin:0px 0px 10px 0px;
+    font-size:1.2em;
+}
+
+h3 {
+    margin:0px 0px 20px 0px;
+    font-size:2em;
+    padding:0px 20px;
+}
+
+h4 {
+    font-weight:700;
+    font-size:1.1em;
+    line-height:1em;
+    margin:0px 0px 10px 0px;
+}
+
+.ti {
+    color:var(--text);
+    font-size:18px;
+    height:18px;
+    width:18px;
+}
+
+/* --- sidebar --- */
+
+.side {
+    position:fixed;
+    top:60px;
+    left:40px;
+    width:200px;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+    .side-block {
+        box-sizing:border-box;
+        padding:20px;
+        border:1px solid var(--border);
+        background-color:var(--text-bg);
+        box-shadow:0px 0px 5px rgba(0,0,0,0.1);
+    }
+    
+        .side-top {
+            width:100%;
+            height:60px;
+            margin-bottom:10px;
+            display:flex;
+            align-items:center;
+            gap:10px;
+        }
+
+        .side-top-img {
+            margin:-20px -20px 20px -20px;
+            width:calc(100% + 40px);
+            height:105px;
+            background-image:var(--sidebar);
+            background-size:cover;
+            background-position:center -75px;
+            border-bottom:1px solid var(--border);
+            box-shadow:0px 0px 5px rgba(0,0,0,0.1);
+        }
+        
+        .side-block h2 {
+            margin:0px;
+            text-transform:uppercase;
+        }
+
+    .side-legend {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-wrap:wrap;
+        gap:5px;
+    }
+
+        .legend-item {
+            width:100%;
+            height:auto;
+            display:flex;
+            align-items:center;
+            justify-content:flex-start;
+            gap:10px;
+        }
+        
+            .legend-item span {padding:0px 3px;}
+        
+            .legend-item span.asia {background-color:var(--asia);}
+            .legend-item span.northam {background-color:var(--northam);}
+            .legend-item span.southam {background-color:var(--southam);}
+            .legend-item span.europe {background-color:var(--europe);}
+            .legend-item span.australia {background-color:var(--australia);}
+            .legend-item span.africa {background-color:var(--africa);}
+            
+/* --- calendar --- */
+
+.weekdays {
+    position:fixed;
+    z-index:50;
+    top:-1px;
+    left:260px;
+    width:calc(100% - 200px - 80px - 30px);
+    height:43px;
+    background-color:var(--background);
+}
+
+    .weekdays th {
+        text-align:center;
+        background-color:#ff3b55;
+        text-transform:uppercase;
+        color:var(--text-bg);
+    }
+
+.calendar-container {
+    position:relative;
+    z-index:1;
+    margin-left:260px;
+    margin-top:0px;
+    top:0px;
+    width:calc(100% - 200px - 80px - 30px);
+    height:auto;
+    padding-bottom:40px;
+}
+
+    .calendar-container h3 {
+        display:flex;
+        justify-content:space-between;
+        border-top:70px solid transparent;
+    }
+
+/* --- calendar --- */
+
+table {
+    width:100%;
+    height:auto;
+    border-collapse:collapse;
+    border-spacing:0;
+    margin-bottom:40px;
+    counter-reset:month;
+    table-layout:fixed;
+    background-color:var(--text-bg);
+    box-shadow:0px 0px 5px rgba(0,0,0,0.1);
+}
+
+    th, td {
+        width:calc(100% / 7);
+        border:1px solid var(--border);
+        padding:10px;
+        vertical-align:top;
+    }
+    
+    th {
+        height:20px;
+        font-weight:bold;
+    }
+    
+    td {
+        height:130px;
+    }
+    
+    td:before {
+        counter-increment:month;
+        content:counter(month, decimal-leading-zero);
+        width:20px;
+        height:20px;
+        margin-bottom:5px;
+        padding:2px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        border:1px solid var(--border);
+        background:var(--light);
+        border-radius:20px;
+    }
+    
+    td.empty:before {
+        counter-increment:none;
+        display:none;
+    }
+    
+    td.empty {background-color:var(--light);}
+    td.asia {background-color:var(--asia);}
+    td.northam {background-color:var(--northam);}
+    td.southam {background-color:var(--southam);}
+    td.europe {background-color:var(--europe);}
+    td.australia {background-color:var(--australia);}
+    td.africa {background-color:var(--africa);}
+
+    
+    .location {
+        position:relative;
+        margin:-31px 0px 15px 31px;
+        width:auto;
+        height:24px;
+        display:flex;
+        align-items:center;
+        justify-content:flex-end;
+        font-weight:700;
+        text-align:right;
+    }
+
+    .performance {
+        width:100%;
+        height:auto;
+        display:flex;
+        align-items:center;
+        gap:5px;
+        margin-bottom:10px;
+    }
+    
+        .performance .album-img {
+            width:30px;
+            height:30px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        
+            .album-img .ti {
+                color:var(--text-bg);
+            }
+    
+        .performance span {
+            width:calc(100% - 35px);
+            line-height:1em;
+        }
+
+/* --- sidebar right --- */
+
+.right {
+    position:fixed;
+    top:60px;
+    right:40px;
+    width:200px;
+    height:auto;
+    display:none;
+    flex-direction:column;
+    gap:20px;
+}
+
+.albums {
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.album {
+    width:100%;
+    height:40px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+}
+
+    .album-img {
+        width:40px;
+        height:40px;
+        border-radius:4px;
+        box-shadow:0px 0px 5px rgba(0,0,0,0.1);
+        background-size:cover;
+        background-position:center;
+    }
+    
+        .album-img.showalbums {background-image:var(--showalbums);}
+        
+        .album-img.coolskool {background-image:var(--coolskool);}
+        .album-img.rulate {background-image:var(--rulate);}
+        .album-img.skoolluv {background-image:var(--skoolluv);}
+        .album-img.darkwild {background-image:var(--darkwild);}
+        .album-img.hyyh1 {background-image:var(--hyyh1);}
+        .album-img.hyyh2 {background-image:var(--hyyh2);}
+        .album-img.youngforever {background-image:var(--youngforever);}
+        .album-img.wings {background-image:var(--wings);}
+        .album-img.neverwalkalone {background-image:var(--neverwalkalone);}
+        .album-img.lyher {background-image:var(--lyher);}
+        .album-img.lytear {background-image:var(--lytear);}
+        .album-img.lyanswer {background-image:var(--lyanswer);}
+        .album-img.persona {background-image:var(--persona);}
+        .album-img.mots7 {background-image:var(--mots7);}
+        .album-img.be {background-image:var(--be);}
+        .album-img.proof {background-image:var(--proof);}
+        .album-img.taketwo {background-image:var(--taketwo);}
+        .album-img.faceyourself {background-image:var(--faceyourself);}
+
+/* --- credit / do not edit --- */
+
+a.credit {
+    position:fixed;
+    z-index:10;
+    right:10px;
+    bottom:10px;
+    opacity:0.75;
+}
+
+    a.credit i {font-size:18px;}
+
+</style>
+</head>
+<body>
+
+<div class="side">
+
+    <div class="side-block">
+        
+        <div class="side-top-img"></div>
+        
+        <h2>arirang army time</h2>
+        
+        Tracking the surprise songs during the encore!
+        
+    </div>
+
+    <div class="side-block">
+        
+        <h4>Continents</h4>
+    
+        <div class="side-legend">
+            <!--
+            <div class="legend-item">
+                <i class="ti ti-guitar-pick"></i>
+                performed on guitar
+            </div>
+            
+            <div class="legend-item">
+                <i class="ti ti-piano"></i>
+                performed on piano
+            </div>
+            
+            <div class="legend-item">
+                <i class="ti ti-cloud-rain"></i>
+                rainy day
+            </div>
+            
+            <div class="legend-item">
+                <i class="ti ti-calendar-month"></i>
+                <a href="#twentythree">jump to 2023</a>
+            </div>
+            
+            <div class="legend-item">
+                <i class="ti ti-calendar-month"></i>
+                <a href="#twentyfour">jump to 2024</a>
+            </div>
+            -->
+            
+            <div class="legend-item">
+                <i class="ti ti-flag"></i>
+                <span class="asia">Asia</span>
+            </div>
+            
+            <div class="legend-item">
+                <i class="ti ti-flag"></i>
+                <span class="northam">North America</span>
+            </div>
+            
+            <div class="legend-item">
+                <i class="ti ti-flag"></i>
+                <span class="southam">South America</span>
+            </div>
+            
+            <div class="legend-item">
+                <i class="ti ti-flag"></i>
+                <span class="europe">Europe</span>
+            </div>
+            
+            <div class="legend-item">
+                <i class="ti ti-flag"></i>
+                <span class="australia">Australia</span>
+            </div>
+            
+            <div class="legend-item">
+                <i class="ti ti-flag"></i>
+                <span class="africa">Africa</span>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+
+
+<div class="weekdays">
+    <table>
+            <tr>
+                <th>monday</th>
+                <th>tuesday</th>
+                <th>wednesday</th>
+                <th>thursday</th>
+                <th>friday</th>
+                <th>saturday</th>
+                <th>sunday</th>
+            </tr>
+    </table>
+</div>
+
+
+
+<!-- FORMATTING -->
+
+<!-- 
+
+// remove dates from a block
+<td class="empty"></td>
+
+// continent colours
+<td class="americas"></td>
+<td class="europe"></td>
+<td class="asia"></td>
+<td class="australia"></td>
+
+
+// inside <td> use these:
+
+// for a flag OR rain OR both: remove "flag" or "rain" if not necessary
+<div class="icons">
+    <div class="flag" title="country name"></div>
+    <div class="rain"></div>
+</div>
+
+
+// copy and paste one performance block PER SONG
+
+// GUITAR SONG
+<div class="performance album-ALBUMNAME">
+    <div class="album-img ALBUMNAME">
+        <i class="ti ti-guitar-pick"></i>
+    </div>
+    <span>SONG TITLE</span>
+</div>
+    
+// PIANO SONG
+<div class="performance album-ALBUMNAME">
+    <div class="album-img ALBUMNAME">
+        <i class="ti ti-piano"></i>
+    </div>
+    <span>SONG TITLE</span>
+</div>
+
+// NO ICON ON ALBUM ART
+<div class="performance album-ALBUMNAME">
+    <div class="album-img ALBUMNAME"></div>
+    <span>SONG TITLE</span>
+</div>
+
+-->
+
+<div class="calendar-container">
+
+<!-- paste new months below this line -->
+
+    <h3 id="twentythree">april <span>2026</span></h3>
+    
+    <table>
+        
+        <!-- week 1 / example 
+        <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td></td>
+            <td class="europe">
+                <div class="icons">
+                    <div class="flag" title="germany"></div>
+                </div>
+                
+                <div class="performance album-fearless">
+                    <div class="album-img fearless">
+                        <i class="ti ti-piano"></i>
+                    </div>
+                    <span>name of piano song</span>
+                </div>
+                
+                <div class="performance album-evermore">
+                    <div class="album-img evermore">
+                        <i class="ti ti-guitar-pick"></i>
+                    </div>
+                    <span>name of guitar song</span>
+                </div>
+            </td>
+            
+            <td class="asia">
+                <div class="icons">
+                    <div class="flag" title="taiwan"></div>
+                    <div class="rain"></div>
+                </div>
+                
+                <div class="performance album-midnights">
+                    <div class="album-img midnights">
+                        <i class="ti ti-piano"></i>
+                    </div>
+                    <span>beep beep</span>
+                </div>
+                
+                <div class="performance album-red">
+                    <div class="album-img red">
+                        <i class="ti ti-guitar-pick"></i>
+                    </div>
+                    <span>boop boop</span>
+                </div>
+            </td>
+            
+            <td class="americas">
+                <div class="icons">
+                    <div class="flag" title="mexico"></div>
+                </div>
+                
+                <div class="performance album-nineteen">
+                    <div class="album-img nineteen">
+                        <i class="ti ti-guitar-pick"></i>
+                    </div>
+                    <span>song title</span>
+                </div>
+                
+                <div class="performance album-evermore">
+                    <div class="album-img evermore">
+                        <i class="ti ti-piano"></i>
+                    </div>
+                    <span>song title</span>
+                </div>
+            </td>
+            
+            <td class="australia">
+                <div class="icons">
+                    <div class="flag" title="australia"></div>
+                    <div class="rain"></div>
+                </div>
+                
+                <div class="performance album-reputation">
+                    <div class="album-img reputation">
+                        <i class="ti ti-piano"></i>
+                    </div>
+                    <span>reputation</span>
+                </div>
+                
+                <div class="performance album-speaknow">
+                    <div class="album-img speaknow">
+                        <i class="ti ti-guitar-pick"></i>
+                    </div>
+                    <span>speak now</span>
+                </div>
+            </td>
+        </tr> -->
+        
+        <!-- week 1 -->
+        <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- week 2 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="asia">
+                <div class="location">
+                    GOYANG
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img persona"></div>
+                    <span>Mikrokosmos</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img hyyh1"></div>
+                    <span>I Need U</span>
+                </div>
+            </td>
+            <td></td>
+            <td class="asia">
+                <div class="location">
+                    GOYANG
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img taketwo"></div>
+                    <span>Take Two</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img lyher"></div>
+                    <span>DNA</span>
+                </div>
+            </td>
+            
+            <td class="asia">
+                <div class="location">
+                    GOYANG
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img neverwalkalone"></div>
+                    <span>Spring Day</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img hyyh2"></div>
+                    <span>Run</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 3 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="asia">
+                <div class="location">TOKYO</div>
+                <div class="performance">
+                    <div class="album-img youngforever"></div>
+                    <span>Save Me</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img faceyourself"></div>
+                    <span>Crystal Snow</span>
+                </div>
+            </td>
+            <td class="asia">
+                <div class="location">TOKYO</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+        
+        <!-- week 4 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="northam">
+                <div class="location">TAMPA</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="northam">
+                <div class="location">TAMPA</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 5 -->
+        <tr>
+            <td></td>
+            <td class="northam">
+                <div class="location">TAMPA</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+        </tr>
+    </table>
+    
+    
+    <h3>may <span>2026</span></h3>
+    
+    <table>
+        <!-- week 1 -->
+        <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td></td>
+            <td class="northam">
+                <div class="location">EL PASO</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="northam">
+                <div class="location">EL PASO</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 2 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="northam">
+                <div class="location">MEXICO CITY</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td class="northam">
+                <div class="location">MEXICO CITY</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="northam">
+                <div class="location">MEXICO CITY</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 3 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="northam">
+                <div class="location">STANFORD</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="northam">
+                <div class="location">STANFORD</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 4 -->
+        <tr>
+            <td></td>
+            <td class="northam">
+                <div class="location">STANFORD</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="northam">
+                <div class="location">LAS VEGAS</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="northam">
+                <div class="location">LAS VEGAS</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 5 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="northam">
+                <div class="location">LAS VEGAS</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="northam">
+                <div class="location">LAS VEGAS</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    
+    
+    <h3>june <span>2026</span></h3>
+    
+    <table>
+        <!-- week 1 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- week 2 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="asia">
+                <div class="location">BUSAN</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="asia">
+                <div class="location">BUSAN</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+        
+        <!-- week 3 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- week 4 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="europe">
+                <div class="location">MADRID</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="europe">
+                <div class="location">MADRID</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+        
+        <!-- week 5 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+        </tr>
+    </table>
+    
+    
+    <h3>july <span>2026</span></h3>
+    
+    <table>
+        <!-- week 1 -->
+        <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="europe">
+                <div class="location">BRUSSELS</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="europe">
+                <div class="location">BRUSSELS</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- week 2 -->
+        <tr>
+            <td class="europe">
+                <div class="location">LONDON</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="europe">
+                <div class="location">LONDON</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="europe">
+                <div class="location">MUNICH</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="europe">
+                <div class="location">MUNICH</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 3 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="europe">
+                <div class="location">PARIS</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="europe">
+                <div class="location">PARIS</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+        
+        <!-- week 4 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- week 5 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+        </tr>
+    </table>
+    
+    
+    
+    <h3>august <span>2026</span></h3>
+    
+    <table>
+        <!-- week 1 -->
+        <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="northam">
+                <div class="location">EAST RUTHERFORD</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="northam">
+                <div class="location">EAST RUTHERFORD</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 2 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="northam">
+                <div class="location">FOXBOROUGH</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="northam">
+                <div class="location">FOXBOROUGH</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- week 3 -->
+        <tr>
+            <td class="northam">
+                <div class="location">BALTIMORE</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="northam">
+                <div class="location">BALTIMORE</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="northam">
+                <div class="location">ARLINGTON</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="northam">
+                <div class="location">ARLINGTON</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 4 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="northam">
+                <div class="location">TORONTO</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="northam">
+                <div class="location">TORONTO</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 5 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="northam">
+                <div class="location">CHICAGO</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="northam">
+                <div class="location">CHICAGO</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- week 6 -->
+        <tr>
+            <td></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+        </tr>
+    </table>
+    
+    
+    <h3>september <span>2026</span></h3>
+    
+    <table>
+        <!-- week 1 -->
+        <tr>
+            <td class="empty"></td>
+            <td class="northam">
+                <div class="location">LOS ANGELES</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="northam">
+                <div class="location">LOS ANGELES</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+            <td class="northam">
+                <div class="location">LOS ANGELES</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="northam">
+                <div class="location">LOS ANGELES</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 2 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- week 3 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- week 4 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- week 5 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+        </tr>
+    </table>
+    
+    
+    
+    <h3>october <span>2026</span></h3>
+    
+    <table>
+        <!-- week 1 -->
+        <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td></td>
+            <td class="southam">
+                <div class="location">BOGOTA</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="southam">
+                <div class="location">BOGOTA</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+        
+        <!-- week 2 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="southam">
+                <div class="location">LIMA</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td class="southam">
+                <div class="location">LIMA</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="southam">
+                <div class="location">LIMA</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+        
+        <!-- week 3 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="southam">
+                <div class="location">SANTIAGO</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td class="southam">
+                <div class="location">SANTIAGO</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="southam">
+                <div class="location">SANTIAGO</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+        
+        <!-- week 4 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="southam">
+                <div class="location">BUENOS AIRES</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td class="southam">
+                <div class="location">BUENOS AIRES</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="southam">
+                <div class="location">BUENOS AIRES</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+        
+        <!-- week 5 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="southam">
+                <div class="location">SÃO PAULO</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td class="southam">
+                <div class="location">SÃO PAULO</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="southam">
+                <div class="location">SÃO PAULO</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="empty"></td>
+        </tr>
+    </table>
+    
+    
+    
+    
+    <h3>november <span>2026</span></h3>
+    
+    <table>
+        <!-- week 1 -->
+        <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td></td>
+        </tr>
+        
+        <!-- week 2 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- week 3 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- week 4 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="asia">
+                <div class="location">KAOHSIUNG</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td class="asia">
+                <div class="location">KAOHSIUNG</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="asia">
+                <div class="location">KAOHSIUNG</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 5 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- week 6 -->
+        <tr>
+            <td></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+        </tr>
+    </table>
+    
+    
+    <h3>december <span>2026</span></h3>
+    
+    <table>
+        <!-- week 1 -->
+        <tr>
+            <td class="empty"></td>
+            <td></td>
+            <td></td>
+            <td class="asia">
+                <div class="location">BANGKOK</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td class="asia">
+                <div class="location">BANGKOK</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="asia">
+                <div class="location">BANGKOK</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 2 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="asia">
+                <div class="location">KUALA LUMPUR</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="asia">
+                <div class="location">KUALA LUMPUR</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 3 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="asia">
+                <div class="location">SINGAPORE</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td class="asia">
+                <div class="location">SINGAPORE</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="asia">
+                <div class="location">SINGAPORE</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 4 -->
+        <tr>
+            <td></td>
+            <td class="asia">
+                <div class="location">SINGAPORE</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="asia">
+                <div class="location">JAKARTA</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="asia">
+                <div class="location">JAKARTA</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 5 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+        </tr>
+    </table>
+    
+    
+    
+    <h3>february <span>2027</span></h3>
+    
+    <table>
+        <!-- week 1 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- week 2 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="australia">
+                <div class="location">MELBOURNE</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="australia">
+                <div class="location">MELBOURNE</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+        
+        <!-- week 3 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="australia">
+                <div class="location">SYDNEY</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="australia">
+                <div class="location">SYDNEY</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 4 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    
+    
+    <h3>march <span>2027</span></h3>
+    
+    <table>
+        <!-- week 1 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="asia">
+                <div class="location">HONG KONG</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td></td>
+            <td class="asia">
+                <div class="location">HONG KONG</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="asia">
+                <div class="location">HONG KONG</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 2 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="asia">
+                <div class="location">MANILA</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+            <td class="asia">
+                <div class="location">MANILA</div>
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+                
+                <div class="performance">
+                    <div class="album-img "></div>
+                    <span>??</span>
+                </div>
+            </td>
+        </tr>
+        
+        <!-- week 3 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- week 4 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- week 5 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+        </tr>
+        
+    </table>
+    
+    
+    
+    
+        
+    <!-- paste new months above this line -->
+ </div>
+ 
+
+
+<a class="credit" href="https://pirateskinned.tumblr.com/" title="made by pirateskinned">
+    <i class="ti ti-anchor"></i>
+</a>
+
+</body></html>
