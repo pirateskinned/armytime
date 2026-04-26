@@ -11,6 +11,8 @@
 <meta property="og:image:width" content="400" />
 <meta property="og:image:height" content="300" />
 <meta property="og:image:alt" content="Group photo of BTS on the set of the Hooligan music video" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 
 <!-- scripts -->
 
@@ -92,7 +94,15 @@
     --foryou:url('https://64.media.tumblr.com/aa343be084e44d75c3a34e9feb30da7d/d23afb846aa69d50-c1/s1280x1920/8a93cc5aaae25fa3196fe2a949249cc8464ef6d2.jpg');
     --butter:url('https://64.media.tumblr.com/ec373307f6107dfdf29c51318c4f8c5f/f6d8fd61dd042f0e-90/s540x810/9d5abc536d5f96c294605b4b06b2839c2e448b6a.jpg');
     
-    
+}
+
+iframe.tmblr-iframe {
+    z-index:999999!important;
+    top:7px!important;
+    right:10px!important;
+    transform:scale(0.5);
+    transform-origin:100% 0;
+    display:none;
 }
 
 /* --- tooltips & scrollbars --- */
@@ -259,7 +269,7 @@ h4 {
             box-shadow:0px 0px 5px rgba(0,0,0,0.1);
         }
         
-        .side-block h2 {
+        .side-block h2, .mobile-side h2 {
             margin:0px;
             text-transform:uppercase;
         }
@@ -290,9 +300,47 @@ h4 {
             .legend-item span.australia {background-color:var(--australia);}
             .legend-item span.africa {background-color:var(--africa);}
             
+/* --- mobile sidebar --- */
+
+.mobile-side {
+    position:relative;
+    margin:40px 10px -40px 10px;
+    width:calc(100% - 20px);
+    height:auto;
+    box-sizing:border-box;
+    padding:20px;
+    border:1px solid var(--border);
+    background-color:var(--text-bg);
+    box-shadow:0px 0px 5px rgba(0,0,0,0.1);
+    display:none;
+}
+
+    .mobile-side-flex {
+        display:flex;
+        gap:10px;
+    }
+        
+        .mobile-side-flex .side-top-img {
+            margin:0px;
+            width:100px;
+            height:100px;
+            display:block;
+            background-position:center center;
+        }
+    
+        .mobile-side-flex-text {
+            width:calc((100% - 100px) / 2);
+        }
+        
+        .mobile-side-flex-legend {
+            width:calc((100% - 100px) / 2.5);
+        }
+
+    .mobile-side .legend-item {width:auto;}
+
 /* --- calendar --- */
 
-.weekdays {
+.weekdays-des, .weekdays-mob {
     position:fixed;
     z-index:50;
     top:-1px;
@@ -302,12 +350,16 @@ h4 {
     background-color:var(--background);
 }
 
-    .weekdays th {
+    .weekdays-des th,
+    .weekdays-mob th{
         text-align:center;
         background-color:#ff3b55;
         text-transform:uppercase;
         color:var(--text-bg);
     }
+    
+        .weekdays-des {display:block;}
+        .weekdays-mob {display:none;}
 
 .calendar-container {
     position:relative;
@@ -425,35 +477,7 @@ table {
             line-height:1em;
         }
 
-/* --- sidebar right --- */
-
-.right {
-    position:fixed;
-    top:60px;
-    right:40px;
-    width:200px;
-    height:auto;
-    display:none;
-    flex-direction:column;
-    gap:20px;
-}
-
-.albums {
-    width:100%;
-    height:auto;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-
-.album {
-    width:100%;
-    height:40px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    cursor:pointer;
-}
+/* --- album covers --- */
 
     .album-img {
         width:40px;
@@ -463,8 +487,6 @@ table {
         background-size:cover;
         background-position:center;
     }
-    
-        .album-img.showalbums {background-image:var(--showalbums);}
         
         .album-img.coolskool {background-image:var(--coolskool);}
         .album-img.rulate {background-image:var(--rulate);}
@@ -487,7 +509,40 @@ table {
         .album-img.foryou {background-image:var(--foryou);}
         .album-img.butter {background-image:var(--butter);}
 
-/* --- credit / do not edit --- */
+/* --- mobile version --- */
+
+@media only screen and (max-width: 900px) {
+    .weekdays-des {display:none;}
+    .weekdays-mob {display:block;}
+    .side {display:none;}
+    .mobile-side {display:block;}
+    .weekdays-mob {width:100%;left:0px;}
+    .calendar-container {width:calc(100% - 20px); margin-left:10px;
+    }
+    
+    td {padding:10px 5px;}
+    td:before {
+        margin-left:calc(50% - 13px);
+    }
+    
+    .location {
+        margin:0px 0px 10px 0px;
+        width:100%;
+        text-align:center;
+        word-wrap:break-word;
+        display:inline-block;
+    }
+    
+    .performance {
+        flex-direction:column;
+        text-align:center;
+    }
+    
+        .performance span {width:100%;}
+    
+}
+
+/* --- credit --- */
 
 a.credit {
     position:fixed;
@@ -520,33 +575,6 @@ a.credit {
         <h4>Continents</h4>
     
         <div class="side-legend">
-            <!--
-            <div class="legend-item">
-                <i class="ti ti-guitar-pick"></i>
-                performed on guitar
-            </div>
-            
-            <div class="legend-item">
-                <i class="ti ti-piano"></i>
-                performed on piano
-            </div>
-            
-            <div class="legend-item">
-                <i class="ti ti-cloud-rain"></i>
-                rainy day
-            </div>
-            
-            <div class="legend-item">
-                <i class="ti ti-calendar-month"></i>
-                <a href="#twentythree">jump to 2023</a>
-            </div>
-            
-            <div class="legend-item">
-                <i class="ti ti-calendar-month"></i>
-                <a href="#twentyfour">jump to 2024</a>
-            </div>
-            -->
-            
             <div class="legend-item">
                 <i class="ti ti-flag"></i>
                 <span class="asia">Asia</span>
@@ -583,7 +611,7 @@ a.credit {
 </div>
 
 
-<div class="weekdays">
+<div class="weekdays-des">
     <table>
             <tr>
                 <th>monday</th>
@@ -597,56 +625,61 @@ a.credit {
     </table>
 </div>
 
-
-
-<!-- FORMATTING -->
-
-<!-- 
-
-// remove dates from a block
-<td class="empty"></td>
-
-// continent colours
-<td class="americas"></td>
-<td class="europe"></td>
-<td class="asia"></td>
-<td class="australia"></td>
-
-
-// inside <td> use these:
-
-// for a flag OR rain OR both: remove "flag" or "rain" if not necessary
-<div class="icons">
-    <div class="flag" title="country name"></div>
-    <div class="rain"></div>
+<div class="weekdays-mob">
+    <table>
+            <tr>
+                <th>mon</th>
+                <th>tue</th>
+                <th>wed</th>
+                <th>thu</th>
+                <th>fri</th>
+                <th>sat</th>
+                <th>sun</th>
+            </tr>
+    </table>
 </div>
 
 
-// copy and paste one performance block PER SONG
-
-// GUITAR SONG
-<div class="performance album-ALBUMNAME">
-    <div class="album-img ALBUMNAME">
-        <i class="ti ti-guitar-pick"></i>
-    </div>
-    <span>SONG TITLE</span>
-</div>
+<div class="mobile-side">
+    <div class="mobile-side-flex">
+        <div class="side-top-img"></div>
+        
+        <div class="mobile-side-flex-text">
+            <h2>arirang army time</h2>
+            Tracking the surprise songs during the encore!
+        </div>
+        
+        <div class="mobile-side-flex-legend">
+            <h4>Continents</h4>
     
-// PIANO SONG
-<div class="performance album-ALBUMNAME">
-    <div class="album-img ALBUMNAME">
-        <i class="ti ti-piano"></i>
+            <div class="side-legend">
+                <div class="legend-item">
+                    <span class="asia">Asia</span>
+                </div>
+                
+                <div class="legend-item">
+                    <span class="northam">North America</span>
+                </div>
+                
+                <div class="legend-item">
+                    <span class="southam">South America</span>
+                </div>
+                
+                <div class="legend-item">
+                    <span class="europe">Europe</span>
+                </div>
+                
+                <div class="legend-item">
+                    <span class="australia">Australia</span>
+                </div>
+                
+                <div class="legend-item">
+                    <span class="africa">Africa</span>
+                </div>
+            </div>
+        </div>
     </div>
-    <span>SONG TITLE</span>
 </div>
-
-// NO ICON ON ALBUM ART
-<div class="performance album-ALBUMNAME">
-    <div class="album-img ALBUMNAME"></div>
-    <span>SONG TITLE</span>
-</div>
-
--->
 
 <div class="calendar-container">
 
@@ -655,94 +688,6 @@ a.credit {
     <h3 id="twentythree">april <span>2026</span></h3>
     
     <table>
-        
-        <!-- week 1 / example 
-        <tr>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td></td>
-            <td class="europe">
-                <div class="icons">
-                    <div class="flag" title="germany"></div>
-                </div>
-                
-                <div class="performance album-fearless">
-                    <div class="album-img fearless">
-                        <i class="ti ti-piano"></i>
-                    </div>
-                    <span>name of piano song</span>
-                </div>
-                
-                <div class="performance album-evermore">
-                    <div class="album-img evermore">
-                        <i class="ti ti-guitar-pick"></i>
-                    </div>
-                    <span>name of guitar song</span>
-                </div>
-            </td>
-            
-            <td class="asia">
-                <div class="icons">
-                    <div class="flag" title="taiwan"></div>
-                    <div class="rain"></div>
-                </div>
-                
-                <div class="performance album-midnights">
-                    <div class="album-img midnights">
-                        <i class="ti ti-piano"></i>
-                    </div>
-                    <span>beep beep</span>
-                </div>
-                
-                <div class="performance album-red">
-                    <div class="album-img red">
-                        <i class="ti ti-guitar-pick"></i>
-                    </div>
-                    <span>boop boop</span>
-                </div>
-            </td>
-            
-            <td class="americas">
-                <div class="icons">
-                    <div class="flag" title="mexico"></div>
-                </div>
-                
-                <div class="performance album-nineteen">
-                    <div class="album-img nineteen">
-                        <i class="ti ti-guitar-pick"></i>
-                    </div>
-                    <span>song title</span>
-                </div>
-                
-                <div class="performance album-evermore">
-                    <div class="album-img evermore">
-                        <i class="ti ti-piano"></i>
-                    </div>
-                    <span>song title</span>
-                </div>
-            </td>
-            
-            <td class="australia">
-                <div class="icons">
-                    <div class="flag" title="australia"></div>
-                    <div class="rain"></div>
-                </div>
-                
-                <div class="performance album-reputation">
-                    <div class="album-img reputation">
-                        <i class="ti ti-piano"></i>
-                    </div>
-                    <span>reputation</span>
-                </div>
-                
-                <div class="performance album-speaknow">
-                    <div class="album-img speaknow">
-                        <i class="ti ti-guitar-pick"></i>
-                    </div>
-                    <span>speak now</span>
-                </div>
-            </td>
-        </tr> -->
         
         <!-- week 1 -->
         <tr>
@@ -762,12 +707,12 @@ a.credit {
             <td></td>
             <td class="asia">
                 <div class="location">
-                    GOYANG
+                    GO<wbr>&shy;YANG
                 </div>
                 
                 <div class="performance">
                     <div class="album-img persona"></div>
-                    <span>Mikrokosmos</span>
+                    <span>Mikro<wbr>&shy;kosmos</span>
                 </div>
                 
                 <div class="performance">
@@ -778,7 +723,7 @@ a.credit {
             <td></td>
             <td class="asia">
                 <div class="location">
-                    GOYANG
+                    GO<wbr>&shy;YANG
                 </div>
                 
                 <div class="performance">
@@ -794,7 +739,7 @@ a.credit {
             
             <td class="asia">
                 <div class="location">
-                    GOYANG
+                    GO<wbr>&shy;YANG
                 </div>
                 
                 <div class="performance">
@@ -853,7 +798,7 @@ a.credit {
                 <div class="location">TAMPA</div>
                 <div class="performance">
                     <div class="album-img butter"></div>
-                    <span>Permission To Dance</span>
+                    <span>Per<wbr>&shy;mission To Dance</span>
                 </div>
                 
                 <div class="performance">
@@ -941,7 +886,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="northam">
-                <div class="location">MEXICO CITY</div>
+                <div class="location">MEX<wbr>&shy;ICO CITY</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -954,7 +899,7 @@ a.credit {
             </td>
             <td></td>
             <td class="northam">
-                <div class="location">MEXICO CITY</div>
+                <div class="location">MEX<wbr>&shy;ICO CITY</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -966,7 +911,7 @@ a.credit {
                 </div>
             </td>
             <td class="northam">
-                <div class="location">MEXICO CITY</div>
+                <div class="location">MEX<wbr>&shy;ICO CITY</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -987,7 +932,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="northam">
-                <div class="location">STANFORD</div>
+                <div class="location">STAN<wbr>&shy;FORD</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -999,7 +944,7 @@ a.credit {
                 </div>
             </td>
             <td class="northam">
-                <div class="location">STANFORD</div>
+                <div class="location">STAN<wbr>&shy;FORD</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1016,7 +961,7 @@ a.credit {
         <tr>
             <td></td>
             <td class="northam">
-                <div class="location">STANFORD</div>
+                <div class="location">STAN<wbr>&shy;FORD</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1156,7 +1101,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="europe">
-                <div class="location">MADRID</div>
+                <div class="location">MA<wbr>&shy;DRID</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1168,7 +1113,7 @@ a.credit {
                 </div>
             </td>
             <td class="europe">
-                <div class="location">MADRID</div>
+                <div class="location">MA<wbr>&shy;DRID</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1203,7 +1148,7 @@ a.credit {
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="europe">
-                <div class="location">BRUSSELS</div>
+                <div class="location">BRU<wbr>&shy;SSELS</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1215,7 +1160,7 @@ a.credit {
                 </div>
             </td>
             <td class="europe">
-                <div class="location">BRUSSELS</div>
+                <div class="location">BRU<wbr>&shy;SSELS</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1234,7 +1179,7 @@ a.credit {
         <!-- week 2 -->
         <tr>
             <td class="europe">
-                <div class="location">LONDON</div>
+                <div class="location">LON<wbr>&shy;DON</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1246,7 +1191,7 @@ a.credit {
                 </div>
             </td>
             <td class="europe">
-                <div class="location">LONDON</div>
+                <div class="location">LON<wbr>&shy;DON</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1261,7 +1206,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="europe">
-                <div class="location">MUNICH</div>
+                <div class="location">MU<wbr>&shy;NICH</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1273,7 +1218,7 @@ a.credit {
                 </div>
             </td>
             <td class="europe">
-                <div class="location">MUNICH</div>
+                <div class="location">MU<wbr>&shy;NICH</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1355,7 +1300,7 @@ a.credit {
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="northam">
-                <div class="location">EAST RUTHERFORD</div>
+                <div class="location">EAST RUTH<wbr>&shy;ERFORD</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1367,7 +1312,7 @@ a.credit {
                 </div>
             </td>
             <td class="northam">
-                <div class="location">EAST RUTHERFORD</div>
+                <div class="location">EAST RUTH<wbr>&shy;ERFORD</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1385,7 +1330,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="northam">
-                <div class="location">FOXBOROUGH</div>
+                <div class="location">FOXBO<wbr>&shy;ROUGH</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1397,7 +1342,7 @@ a.credit {
                 </div>
             </td>
             <td class="northam">
-                <div class="location">FOXBOROUGH</div>
+                <div class="location">FOXBO<wbr>&shy;ROUGH</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1416,7 +1361,7 @@ a.credit {
         <!-- week 3 -->
         <tr>
             <td class="northam">
-                <div class="location">BALTIMORE</div>
+                <div class="location">BALTI<wbr>&shy;MORE</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1428,7 +1373,7 @@ a.credit {
                 </div>
             </td>
             <td class="northam">
-                <div class="location">BALTIMORE</div>
+                <div class="location">BALTI<wbr>&shy;MORE</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1443,7 +1388,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="northam">
-                <div class="location">ARLINGTON</div>
+                <div class="location">ARLING<wbr>&shy;TON</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1455,7 +1400,7 @@ a.credit {
                 </div>
             </td>
             <td class="northam">
-                <div class="location">ARLINGTON</div>
+                <div class="location">ARLING<wbr>&shy;TON</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1476,7 +1421,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="northam">
-                <div class="location">TORONTO</div>
+                <div class="location">TORON<wbr>&shy;TO</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1488,7 +1433,7 @@ a.credit {
                 </div>
             </td>
             <td class="northam">
-                <div class="location">TORONTO</div>
+                <div class="location">TORON<wbr>&shy;TO</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1507,7 +1452,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="northam">
-                <div class="location">CHICAGO</div>
+                <div class="location">CHI<wbr>&shy;CAGO</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1519,7 +1464,7 @@ a.credit {
                 </div>
             </td>
             <td class="northam">
-                <div class="location">CHICAGO</div>
+                <div class="location">CHI<wbr>&shy;CAGO</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1554,7 +1499,7 @@ a.credit {
         <tr>
             <td class="empty"></td>
             <td class="northam">
-                <div class="location">LOS ANGELES</div>
+                <div class="location">LOS ANGE<wbr>&shy;LES</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1566,7 +1511,7 @@ a.credit {
                 </div>
             </td>
             <td class="northam">
-                <div class="location">LOS ANGELES</div>
+                <div class="location">LOS ANGE<wbr>&shy;LES</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1580,7 +1525,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="northam">
-                <div class="location">LOS ANGELES</div>
+                <div class="location">LOS ANGE<wbr>&shy;LES</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1592,7 +1537,7 @@ a.credit {
                 </div>
             </td>
             <td class="northam">
-                <div class="location">LOS ANGELES</div>
+                <div class="location">LOS ANGE<wbr>&shy;LES</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1662,7 +1607,7 @@ a.credit {
             <td class="empty"></td>
             <td></td>
             <td class="southam">
-                <div class="location">BOGOTA</div>
+                <div class="location">BO<wbr>&shy;GOTA</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1674,7 +1619,7 @@ a.credit {
                 </div>
             </td>
             <td class="southam">
-                <div class="location">BOGOTA</div>
+                <div class="location">BO<wbr>&shy;GOTA</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1737,7 +1682,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="southam">
-                <div class="location">SANTIAGO</div>
+                <div class="location">SANTI<wbr>&shy;AGO</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1750,7 +1695,7 @@ a.credit {
             </td>
             <td></td>
             <td class="southam">
-                <div class="location">SANTIAGO</div>
+                <div class="location">SANTI<wbr>&shy;AGO</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1762,7 +1707,7 @@ a.credit {
                 </div>
             </td>
             <td class="southam">
-                <div class="location">SANTIAGO</div>
+                <div class="location">SANTI<wbr>&shy;AGO</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1910,7 +1855,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="asia">
-                <div class="location">KAOHSIUNG</div>
+                <div class="location">KAOH<wbr>&shy;SIUNG</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1923,7 +1868,7 @@ a.credit {
             </td>
             <td></td>
             <td class="asia">
-                <div class="location">KAOHSIUNG</div>
+                <div class="location">KAOH<wbr>&shy;SIUNG</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1935,7 +1880,7 @@ a.credit {
                 </div>
             </td>
             <td class="asia">
-                <div class="location">KAOHSIUNG</div>
+                <div class="location">KAOH<wbr>&shy;SIUNG</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1981,7 +1926,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="asia">
-                <div class="location">BANGKOK</div>
+                <div class="location">BANG<wbr>&shy;KOK</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -1994,7 +1939,7 @@ a.credit {
             </td>
             <td></td>
             <td class="asia">
-                <div class="location">BANGKOK</div>
+                <div class="location">BANG<wbr>&shy;KOK</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -2006,7 +1951,7 @@ a.credit {
                 </div>
             </td>
             <td class="asia">
-                <div class="location">BANGKOK</div>
+                <div class="location">BANG<wbr>&shy;KOK</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -2027,7 +1972,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="asia">
-                <div class="location">KUALA LUMPUR</div>
+                <div class="location">KUALA LUM<wbr>&shy;PUR</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -2039,7 +1984,7 @@ a.credit {
                 </div>
             </td>
             <td class="asia">
-                <div class="location">KUALA LUMPUR</div>
+                <div class="location">KUALA LUM<wbr>&shy;PUR</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -2058,7 +2003,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="asia">
-                <div class="location">SINGAPORE</div>
+                <div class="location">SINGA<wbr>&shy;PORE</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -2071,7 +2016,7 @@ a.credit {
             </td>
             <td></td>
             <td class="asia">
-                <div class="location">SINGAPORE</div>
+                <div class="location">SINGA<wbr>&shy;PORE</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -2083,7 +2028,7 @@ a.credit {
                 </div>
             </td>
             <td class="asia">
-                <div class="location">SINGAPORE</div>
+                <div class="location">SINGA<wbr>&shy;PORE</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -2100,7 +2045,7 @@ a.credit {
         <tr>
             <td></td>
             <td class="asia">
-                <div class="location">SINGAPORE</div>
+                <div class="location">SINGA<wbr>&shy;PORE</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -2115,7 +2060,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="asia">
-                <div class="location">JAKARTA</div>
+                <div class="location">JA<wbr>&shy;KARTA</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -2127,7 +2072,7 @@ a.credit {
                 </div>
             </td>
             <td class="asia">
-                <div class="location">JAKARTA</div>
+                <div class="location">JA<wbr>&shy;KARTA</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -2175,7 +2120,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="australia">
-                <div class="location">MELBOURNE</div>
+                <div class="location">MEL<wbr>&shy;BOURNE</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -2187,7 +2132,7 @@ a.credit {
                 </div>
             </td>
             <td class="australia">
-                <div class="location">MELBOURNE</div>
+                <div class="location">MEL<wbr>&shy;BOURNE</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -2209,7 +2154,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="australia">
-                <div class="location">SYDNEY</div>
+                <div class="location">SYD<wbr>&shy;NEY</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -2221,7 +2166,7 @@ a.credit {
                 </div>
             </td>
             <td class="australia">
-                <div class="location">SYDNEY</div>
+                <div class="location">SYD<wbr>&shy;NEY</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -2302,7 +2247,7 @@ a.credit {
             <td></td>
             <td></td>
             <td class="asia">
-                <div class="location">MANILA</div>
+                <div class="location">MA<wbr>&shy;NILA</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -2314,7 +2259,7 @@ a.credit {
                 </div>
             </td>
             <td class="asia">
-                <div class="location">MANILA</div>
+                <div class="location">MA<wbr>&shy;NILA</div>
                 <div class="performance">
                     <div class="album-img "></div>
                     <span>??</span>
@@ -2371,7 +2316,7 @@ a.credit {
  
 
 
-<a class="credit" href="https://pirateskinned.tumblr.com/" title="made by pirateskinned">
+<a class="credit" href="https://pirateskinned.tumblr.com/" title="made by rowen">
     <i class="ti ti-anchor"></i>
 </a>
 
