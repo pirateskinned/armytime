@@ -249,6 +249,11 @@ h4 {
         background-color:var(--text-bg);
         box-shadow:0px 0px 5px rgba(0,0,0,0.1);
     }
+
+        .side-block a {
+            text-decoration:underline wavy 1px #ff3b55;
+            font-weight:bold;
+        }
     
         .side-top {
             width:100%;
@@ -518,7 +523,7 @@ table {
     .weekdays-mob {display:block;}
     .side {display:none;}
     .mobile-side {display:block;}
-    .weekdays-mob {width:100%;left:0px;}
+    .weekdays-mob {width:calc(100% - 20px);left:10px;}
     .calendar-container {width:calc(100% - 20px); margin-left:10px;
     }
     
@@ -569,7 +574,8 @@ a.credit {
         <h2>arirang army time</h2>
         
         Tracking the surprise songs during the encore!
-        
+        <br><br>
+        <a href="#currentMonth">Jump to current month</a>
     </div>
 
     <div class="side-block">
@@ -1296,7 +1302,7 @@ a.credit {
     
     
     
-    <h3>august <span>2026</span></h3>
+    <h3 id="currentMonth">august <span>2026</span></h3>
     
     <table>
         <!-- week 1 -->
